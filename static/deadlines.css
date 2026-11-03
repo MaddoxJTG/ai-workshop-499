@@ -1,1 +1,15 @@
-/* Styles for deadlines.js. Empty for now. */
+.deadline-overdue {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.deadline-label {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #fee2e2;
+  color: #991b1b;
+  font-size: 0.75rem;
+  font-weight: 700;
+}

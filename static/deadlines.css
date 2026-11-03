@@ -28,3 +28,12 @@
   background: #fef3c7;
   color: #92400e;
 }
+
+.deadline-due-today {
+  color: #ea580c;
+}
+
+.deadline-label-due-today {
+  background: #ffedd5;
+  color: #c2410c;
+}

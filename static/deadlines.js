@@ -10,7 +10,8 @@ function showDeadline(row, cell, opportunity) {
   } else if (opportunity.days_left === 0) {
     row.classList.add("due-soon");
     cell.classList.add("deadline-due-soon");
-    addDeadlineLabel(cell, "deadline-label-due-soon", "Due Today");
+    cell.classList.add("deadline-due-today");
+    addDeadlineLabel(cell, "deadline-label-due-today", "Due Today");
   } else if (opportunity.days_left <= 7) {
     row.classList.add("due-soon");
     cell.classList.add("deadline-due-soon");

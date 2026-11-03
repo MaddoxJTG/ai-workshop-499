@@ -139,6 +139,24 @@ a.name:hover {
 .status-successful { background: #d3f0de; color: #14532d; }
 .status-unsuccessful { background: #fdecec; color: #991b1b; }
 
+.pass-fail {
+  display: inline-flex;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.pass-fail.pass {
+  background: #d3f0de;
+  color: #14532d;
+}
+
+.pass-fail.fail {
+  background: #fdecec;
+  color: #991b1b;
+}
+
 .footnote {
   margin: 10px 0 32px;
   font-size: 0.8rem;

@@ -26,6 +26,13 @@ async function renderTable() {
     const deadlineCell = addCell(row, formatDate(opportunity.deadline));
     showDeadline(row, deadlineCell, opportunity); // in deadlines.js
 
+    const passedCutoff = opportunity.deadline >= "2026-11-02";
+    const passFailCell = addCell(row, "");
+    const passFailBadge = document.createElement("span");
+    passFailBadge.className = passedCutoff ? "pass-fail pass" : "pass-fail fail";
+    passFailBadge.textContent = passedCutoff ? "Pass" : "Fail";
+    passFailCell.appendChild(passFailBadge);
+
     const ownerCell = addCell(row, "");
     const avatar = document.createElement("span");
     avatar.className = "avatar";

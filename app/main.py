@@ -1,5 +1,7 @@
 from pathlib import Path
 
+from datetime import date
+
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -26,5 +28,7 @@ def list_opportunities():
     for opportunity in load_opportunities():
         row = opportunity.model_dump(mode="json")
         row["days_left"] = days_left(opportunity.deadline)
+        if opportunity.deadline == date.today():
+            row["days_left"] = 0
         result.append(row)
     return result

@@ -3,6 +3,11 @@
   font-weight: 600;
 }
 
+.deadline-due-soon {
+  color: #b45309;
+  font-weight: 600;
+}
+
 .deadline-label {
   display: inline-block;
   margin-left: 8px;
@@ -12,4 +17,14 @@
   color: #991b1b;
   font-size: 0.75rem;
   font-weight: 700;
+}
+
+.deadline-label-overdue {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.deadline-label-due-soon {
+  background: #fef3c7;
+  color: #92400e;
 }

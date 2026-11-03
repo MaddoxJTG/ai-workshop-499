@@ -10,12 +10,14 @@ function showDeadline(row, cell, opportunity) {
   if (daysLeft < 0) {
     label = "Overdue";
     className = "deadline-label deadline-overdue";
+    cell.classList.add("deadline-cell-overdue");
   } else if (daysLeft === 0) {
     label = "Due today";
     className = "deadline-label deadline-today";
   } else if (daysLeft <= 7) {
     label = `Due in ${daysLeft} ${daysLeft === 1 ? "day" : "days"}`;
     className = "deadline-label deadline-upcoming";
+    cell.classList.add("deadline-cell-upcoming");
   } else {
     return;
   }

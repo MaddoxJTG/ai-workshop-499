@@ -3,5 +3,27 @@
 //   cell         the deadline cell (<td>)
 //   opportunity  the row's data, including days_left from the server
 function showDeadline(row, cell, opportunity) {
-  // Empty for now.
+  const daysLeft = opportunity.days_left + 1;
+  let label;
+  let className;
+
+  if (daysLeft < 0) {
+    label = "Overdue";
+    className = "deadline-label deadline-overdue";
+    cell.classList.add("deadline-cell-overdue");
+  } else if (daysLeft === 0) {
+    label = "Due today";
+    className = "deadline-label deadline-today";
+  } else if (daysLeft <= 7) {
+    label = `Due in ${daysLeft} ${daysLeft === 1 ? "day" : "days"}`;
+    className = "deadline-label deadline-upcoming";
+    cell.classList.add("deadline-cell-upcoming");
+  } else {
+    return;
+  }
+
+  const badge = document.createElement("span");
+  badge.className = className;
+  badge.textContent = label;
+  cell.appendChild(badge);
 }
